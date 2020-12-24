@@ -1,0 +1,129 @@
+.skills{
+	padding: $sec-padding;
+	background-color: var(--second-bg-color);
+	.exper-box{
+		padding: 10px 0;
+		.exper-head{
+			text-transform: uppercase;
+			margin-bottom: 20px;
+			h4{
+				color:var(--head-color);
+				position: relative;
+				padding-left: 20px;
+				&:before{
+					content: '';
+					position: absolute;
+					top: 18px;
+					left: 0;
+					width: 15px;
+					height: 3px;
+					background-color: var(--theme-color);
+				}
+			}
+			p{
+				font-size: .9rem;
+				color: var(--text-color);
+			}
+		}
+		.exper-body{
+			padding: 10px 0;
+			.progress-skill{
+				position: relative;
+				margin-bottom: 5px;
+				.progress-label{
+					text-transform: capitalize;
+					color:var(--text-color);
+					padding: 10px 0;
+					font-size: .8rem;
+				}
+				.progress-percent{
+
+					position: absolute;
+					bottom: 10px;
+					right: 4px;
+					color: var(--theme-color);
+					font-size: .8rem;
+				}
+				.progress{
+					height: 5px;
+					background-color: var(--first-bg-color);
+					.progress-bar{
+						background-color: var(--theme-color);
+
+					}
+
+				}
+
+
+
+
+			}
+		
+	}
+}
+	.skills-box{
+		padding: 10px 0;
+		.skill-head{
+			text-transform: uppercase;
+			margin-bottom: 20px;
+			h4{
+				color:var(--head-color);
+				position: relative;
+				padding-left: 20px;
+				&:before{
+					content: '';
+					position: absolute;
+					top: 18px;
+					left: 0;
+					width: 15px;
+					height: 3px;
+					background-color: var(--theme-color);
+				}
+			}
+			p{
+				font-size: .9rem;
+				color: var(--text-color);
+			}
+
+		}
+		.skill-body{
+			padding: 10px 0;
+
+			.lang-box{
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				position: relative;
+				padding: 15px 10px;
+				margin-bottom: 20px;
+				@include shape(15px,15px,var(--theme-color),solid,1px);
+				//padding: 20px;
+				
+				border: 1px solid var(--first-bg-color);
+
+				.percent{
+					width: 80px;
+					height: 80px;
+					line-height: 80px;
+					text-align: center;
+					background-color: var(--theme-color);
+					border-radius: 50%;
+					span{
+						color: var(--white-color);
+						font-size: 1.2rem;
+					}
+				}
+				.lang{
+					padding:25px 10px;
+					h5{
+
+						color: var(--head-color);
+						text-transform: capitalize;
+					}
+				}
+			}
+		}
+	}
+
+
+}

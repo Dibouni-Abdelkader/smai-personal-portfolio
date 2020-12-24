@@ -1,0 +1,106 @@
+//-section title 
+mixin section-title(arg1, arg2)
+	.section-title
+			h2.sec-head= arg1
+			p.sec-desc= arg2
+
+mixin box(icon,title)
+	.col-md-3
+		.box
+			.box-icon
+				.circle
+					i.icon.fa(class!=icon)
+			.box-title
+				h4= title
+
+
+//- section skills
+mixin langbox(percent,lang)
+	.col-md-6
+		.lang-box
+			.percent
+				span= percent +'%'
+			.lang
+				h5= lang
+
+//-section skills
+mixin progressbox(label,percent)
+	.progress-skill
+		.progress-label #{label}
+		.progress-percent #{percent + '%'}
+		.progress
+			div(data-value!= percent, style='width:' + percent +'%').progress-bar
+
+//- section contact
+mixin contactbox(icon,title,...info)
+	.col-md-12
+		.contact-box
+			.box-icon
+				i(class!=icon)
+			.box-info
+				h5= title
+				each item in info
+					p=  item
+
+//-section contact
+mixin input(type,placeholder,name,id)
+		.form-group
+			input(type!=type,
+					placeholder!=placeholder,
+					name!=name,
+					id!=id).form-control
+
+//- section portfolio[work]
+mixin workbox(src)
+	.col-md-6.col-lg-4
+		.work-box
+			img(src!=src).img-fluid
+			.box-overlay
+				.box-info
+					a(href='#')
+						i.fa.fa-file-image-o
+					a(href='#')
+						i.fa.fa-search
+
+
+//-section blog
+mixin singelblog(src,date,title,desc,href)
+	.col-md-6.col-lg-4
+		.singel-blog
+			.blog-image
+				img(src!=src, alt='')
+				span.blog-date #{date}
+			.blog-body
+				.blog-title
+					h4 #{title}
+				.blog-desc
+					p #{desc}
+				a(href!=href).blog-link read more
+					i.fa.fa-chevron-right
+
+
+//-section resume
+mixin resumebox(icon,date,title,desc)
+		.col-md-6
+			.resume-box
+				.resume-icon
+					i.fa(class!=icon)
+				.resume-date
+					span #{date}
+				.resume-title
+					h4 #{title}
+				.resume-desc
+					p #{desc}
+
+
+//- section tetimonials 
+mixin singelclient(src,name,job,quote)
+	.singel-client
+		.client-info-wrap
+			.client-img
+				img(src!=src alt='')
+			.client-info
+				h4 #{name}
+				p #{job}
+		.client-quote
+			blockquote #{quote}

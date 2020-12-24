@@ -1,0 +1,92 @@
+/* Start Testimonials */
+.testimonials {
+
+  padding: $sec-padding;
+  background-color: var(--second-bg-color);
+
+  .singel-client {
+    box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid var(--first-bg-color);
+    padding: 20px;
+    position: relative;
+    @include shape(15px, 15px, var(--theme-color), solid, 1px);
+
+    .client-quote {
+      color: var(--text-color);
+      padding: 0 15px;
+      position: relative;
+
+      blockquote {
+        font-size: .8rem;
+        line-height: 1.8;
+      }
+    }
+
+    .client-info-wrap {
+      text-transform: capitalize;
+      text-align: center;
+
+      .client-img {
+        width: 100px;
+        height: 100px;
+        background-color: #eee;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 4px;
+        }
+      }
+
+      .client-info {
+        padding: 10px 0;
+
+        h4 {
+          font-size: 1.1rem;
+          margin: 0;
+          color: var(--head-color);
+
+        }
+
+        p {
+
+          font-size: .8rem;
+          color: var(--text-color);
+          margin: 0;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  // overide owlcarousal clases
+  .owl-carousel .owl-dots{
+    text-align: center !important;
+    padding: 20px 0;
+
+  }
+  
+  .owl-carousel button.owl-dot{
+    width: 15px;
+    height: 15px;
+    border:1px solid var(--theme-color);
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 5px;
+
+  }
+  .owl-carousel button.owl-dot.active{
+    background-color: var(--theme-color);
+  }
+
+}
+
+/* End Testimonials */

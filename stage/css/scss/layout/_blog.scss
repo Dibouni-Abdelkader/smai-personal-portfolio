@@ -1,0 +1,82 @@
+/*Start Blog Section */
+.blog {
+	padding: $sec-padding;
+	background-color: var(--second-bg-color);
+
+	.singel-blog {
+		transition: .3s;
+		cursor: pointer;
+		margin-bottom: 30px;
+		color: var(--text-color);
+		position: relative;
+
+		.blog-image {
+			position: relative;
+			transition: .3s;
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				@include Transition(all, .5s, ease);
+			}
+
+			.blog-date {
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding: 3px 8px;
+				font-size: 12px;
+				color: var(--white-color);
+				background-color: var(--theme-color);
+			}
+		}
+
+		.blog-body {
+			padding: 10px 10px 20px;
+			position: relative;
+			@include shape(15px, 15px, var(--theme-color), solid, 1px);
+			border: 1px solid var(--first-bg-color);
+
+			.blog-title {
+				padding: 15px 0 0;
+				position: relative;
+
+				h4 {
+					text-transform: capitalize;
+					font-size: 1.3rem;
+					color: var(--head-color);
+
+					@media (max-width: 992px) {
+						font-size: 1.1rem;
+					}
+				}
+			}
+
+			.blog-desc {
+			}
+
+			.blog-link {
+				font-weight: bold;
+				color: var(--theme-color);
+				text-decoration: none;
+				text-transform: capitalize;
+				font-size: .83rem;
+
+				i {
+					position: relative;
+					top: 1px;
+					font-size: .7rem;
+					@include Transition(all, ease, .4s);
+				}
+
+				&:hover {
+					i {
+						padding-left: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* End Blog Section */

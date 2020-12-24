@@ -1,0 +1,36 @@
+// Start Contact Section 
+section#contact.contact
+	.container
+		+section-title('get in touch','LOREM IPSUM DOLOR SIT AMET, CONSECTETUR')
+		.row
+			.col-md-7
+				form(action='' method='')
+					.row
+						.col-md-6
+							+input('text','name*','name','name')
+						.col-md-6
+							+input('email','email*','email','email')
+						.col-md-12
+							+input('text','subject','subject','subject')
+						.col-md-12
+							.form-group
+								textarea(required='required',
+										placeholder='your message...').form-control
+						.col-md-12
+							button(type='submit').theme-button send message
+
+			.col-md-5
+				.row
+					+contactbox('fa fa-map-marker',
+											'our address',
+											'123 street new youk city usa 750065')
+					+contactbox('fa fa-phone',
+											'our phone',
+											'ofiice: +044 45444 68555',
+											'ofiice: +044 45444 68555')
+					+contactbox('fa fa-envelope-o',
+											'our email',
+											'info@domainname.com',
+											'contact@domainname.com')
+
+// End Contact Section 

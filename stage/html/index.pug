@@ -1,0 +1,39 @@
+
+-var title = 'sami Template'
+doctype html
+html(lang='en')
+	head
+		//- Include Meta Tags From meta.pug
+		include pug/includes/meta.pug
+
+		//- Title 
+		title= title
+
+		//- Include Styles From styles.pug
+		include pug/includes/styles.pug
+	body
+		//-Include Minxin
+		include pug/mixins/mixins.pug
+
+		//- Include Components
+		include pug/components/preloader.pug
+		include pug/components/packtop.pug
+		
+		//-Include Sections From Layout
+		include pug/layout/hero.pug
+		include pug/layout/sidebar.pug
+		include pug/layout/about.pug
+		include pug/layout/services.pug
+		include pug/layout/resume.pug
+		include pug/layout/skills.pug
+		include pug/layout/portfolio.pug
+		include pug/layout/testimonials.pug
+		//include pug/layout/price.pug
+		include pug/layout/blog.pug
+		include pug/layout/contact.pug
+		include pug/layout/footer.pug
+
+		//-Include Scripts From scripts.pug
+		include pug/includes/scripts.pug
+
+

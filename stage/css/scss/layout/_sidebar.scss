@@ -1,0 +1,114 @@
+.sidebar{
+	width: 200px;
+	height: 100vh;
+	background-color: var(--second-bg-color);
+	position: fixed;
+	top: 0;
+	left:-200px;
+	z-index: 999;
+	will-change: left;
+	@include Transition(all,ease-in-out,.5s);
+
+	&.no-sidebar{
+		left: 0;
+		box-shadow: 1px 0 5px var(--text-color);
+	}
+	.toggler-icon{
+		position: absolute;
+    top: 80px;
+    right: -35px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: var(--theme-color);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    @include Transition(all,ease-in-out,.5s);
+		i{
+			color: var(--white-color);
+			@include Transition(all,ease-in-out,.5s);
+		}
+	}
+	.sidebar-image{
+		padding: 15px 0;
+		text-align:center;
+		//background-color: var(--theme-color);
+		//background-color: var(--first-bg-color);
+	
+		img{
+
+			border-radius: 50%;
+			width: 130px;
+			height: 130px;
+			display: block;
+			margin: auto;
+			border-color: var(--theme-color) !important;
+			background-color: var(--theme-color) !important;
+
+
+		}
+		h4{
+			text-transform: uppercase;
+			color: var(--theme-color);
+			padding-top: 10px;
+		}
+	}
+	.sidebar-menu{
+		ul{
+			list-style-type: none;
+
+			li{
+				box-sizing: border-box;
+				a{
+					display: block;
+					padding: 8px 4px ;
+					text-transform: capitalize;
+					color: var(--text-color) !important;
+					@include Transition(all,ease,.2s);
+					text-decoration: none;
+					&:hover,
+					&.active{
+						color: var(--head-color) !important;
+						background-color: var(--first-bg-color);
+
+						i{
+							color: var(--theme-color);
+						}
+					}
+					i{
+						color:var(--text-color);
+						padding-right: 5px;
+					}
+				}
+			}
+		}
+	}
+	.sidebar-social{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background-color: var(--first-bg-color);
+		.social-icon{
+
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			display: inline-block;
+			
+			color: var(--text-color);
+			@include Transition(all,ease,.3s);
+
+			&:hover{
+
+				color: var(--theme-color);
+				background-color: var(--white-color);
+			}
+
+
+
+		}
+	}
+}

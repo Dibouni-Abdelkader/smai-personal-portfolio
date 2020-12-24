@@ -1,0 +1,20 @@
+section.about#about
+	.container
+		.row
+			.col-md-5
+				.about-image
+					.image-wrap
+						img(src='images/about/1.jpg' alt='').img-fluid
+			.col-md-7
+				.about-info
+					.about-title
+						h5 about me
+					.info-desc
+						p   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus unde molestiae quasi quibusdam, consequuntur iste fuga aliquid, voluptatem natus. Ad numquam, nobis rem dignissimos obcaecati iure minus ab debitis temporibus, molestiae quisquam accusamus quae perspiciatis?---
+					-var info = {name:'aman sami',birthday:'18th sep 1992',address:'123 street new youk city united state',phone:'+01-820-458-3652',freelance:'available'}
+					ul.list-unstyled.info-details
+						each val, index in info
+							li
+								span= index
+								span= val
+					a(href='#').theme-button.text-uppercase download cv

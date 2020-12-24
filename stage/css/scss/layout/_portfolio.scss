@@ -1,0 +1,60 @@
+.work{
+	padding: $sec-padding;
+	background-color: var(--first-bg-color);
+
+	.work-box{
+		margin-bottom: 25px;
+		position: relative;
+		cursor: pointer;
+		.box-overlay{
+			position: absolute;
+			width: 96%;
+			height: 96%;
+			background-color: var(--white-color);
+			z-index: 2;
+			top: 2%;
+			left: 2%;
+			right: 2%;
+			bottom: 2%;
+			opacity: 0;
+			@include Transition(all,.7s,ease);
+			.box-info{
+				position: relative;
+				transform: translateY(-50%);
+				top: 50%;
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				a{
+					text-decoration: none;
+					width:40px;
+					height: 40px;
+					position: relative;
+					@include shape(15px,15px,var(--theme-color),solid,1px);
+					margin: 1px;
+					line-height: 40px; 
+					@include Transition(all,.5s,ease-in-out);
+					i{
+						color:var(--theme-color);
+						@include Transition(all,.5s,ease-in-out);
+	
+					}
+					&:hover{
+						background-color: var(--theme-color);
+						i{
+							color: var(--white-color);
+						}
+					}
+				}
+			}
+		}
+
+		&:hover{
+
+			.box-overlay{
+				opacity: 1;
+			}
+		}
+	}
+}

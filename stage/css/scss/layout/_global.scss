@@ -1,0 +1,90 @@
+/* Start Global Rules*/
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing:border-box;
+
+}
+
+*:focus{
+
+	box-shadow: 0 !important;
+	outline: none !important;
+}
+
+
+body{
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	line-height: 1.7;
+	background: var(--first-bg-color);
+
+	@media screen and(max-width: 992px){
+		font-size: 14px;
+	}
+}
+
+
+
+::selection {
+  background-color: var(--theme-color);
+  color: var(--white-color)
+}
+
+
+ul,
+ol{
+	list-style: none;
+}
+
+
+a:hover{
+
+	text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+// useful classes
+.no-padding{
+	padding: 0 !important;
+}
+.no-margin{
+	margin: 0 !important;
+}
+
+.line-through{
+
+	text-decoration: line-through;
+}
+
+
+/* Scroll Behavior */
+html,body{
+	scroll-behavior: smooth;
+}
+
+/*custom scroll bar*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--second-bg-color);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--theme-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-color);
+}
+
+/* End Global Rules */
